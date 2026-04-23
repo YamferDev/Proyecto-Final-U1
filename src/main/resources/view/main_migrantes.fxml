@@ -11,13 +11,16 @@
     <top>
         <VBox alignment="CENTER" spacing="10">
             <padding><Insets top="15" bottom="15"/></padding>
-            <Label text="REGISTRO DE PADRÓN DE MIGRANTES" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+            <Label text="REGISTRO DE PADRÓN DE MIGRANTES" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
         </VBox>
     </top>
 
     <left>
-        <VBox spacing="10" prefWidth="300">
-            <padding><Insets left="20" right="20" top="10" bottom="10"/></padding>
+        <VBox spacing="10" prefWidth="300" style="-fx-background-color: #f8f9fa; -fx-border-color: #dee2e6; -fx-border-radius: 5; -fx-background-radius: 5;">
+            <BorderPane.margin>
+                <Insets left="20" bottom="20"/>
+            </BorderPane.margin>
+            <padding><Insets left="20" right="20" top="15" bottom="15"/></padding>
             
             <Label text="Nombre Completo:"/>
             <TextField fx:id="txtNombre" promptText="Ej. Juan Pérez" styleClass="form-control"/>
@@ -45,7 +48,7 @@
     
     <center>
         <VBox>
-            <padding><Insets left="10" right="20" top="10" bottom="20"/></padding>
+            <padding><Insets left="10" right="20" top="0" bottom="20"/></padding>
             <TableView fx:id="tvMigrantes" VBox.vgrow="ALWAYS">
                 <!-- Las columnas las definiremos desde el Controlador -->
             </TableView>
