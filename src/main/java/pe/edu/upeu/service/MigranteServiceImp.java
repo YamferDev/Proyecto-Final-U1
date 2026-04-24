@@ -7,13 +7,10 @@ import java.util.List;
 
 public class MigranteServiceImp implements MigranteServiceInter {
 
-    // Nos conectamos al repositorio único (Singleton)
     private MigranteRepository repo = MigranteRepository.getInstance();
 
     @Override
     public void agregarMigrante(Migrante m) {
-        // Aquí podríamos poner reglas de negocio (ej. verificar que el nombre no esté vacío)
-        // Por ahora, simplemente lo pasamos al repositorio
         repo.agregarMigrante(m);
     }
 

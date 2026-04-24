@@ -15,14 +15,11 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        // Cargamos la vista principal
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/main_migrantes.fxml"));
 
-        // Configuramos la ventana para que se ajuste a la pantalla
         Screen screen = Screen.getPrimary();
         Rectangle2D bounds = screen.getVisualBounds();
 
-        // Creamos la escena y le agregamos BootstrapFX para los estilos
         Scene scene = new Scene(loader.load(), bounds.getWidth(), bounds.getHeight() - 100);
         scene.getStylesheets().add(BootstrapFX.bootstrapFXStylesheet());
 
